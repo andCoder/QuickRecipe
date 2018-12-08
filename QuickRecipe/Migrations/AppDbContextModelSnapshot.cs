@@ -2,17 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuickRecipe.Data.Context;
 
-namespace QuickRecipe.Data.Migrations
+namespace QuickRecipe.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20181208114452_modify-recipe-time-amount")]
-    partial class modifyrecipetimeamount
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

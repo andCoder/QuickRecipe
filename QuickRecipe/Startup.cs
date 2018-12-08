@@ -30,7 +30,7 @@ namespace QuickRecipe
             string connection = Configuration.GetConnectionString("AppConnection");
 
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(connection));
+                options.UseSqlServer(connection, b => b.MigrationsAssembly("QuickRecipe")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
