@@ -16,7 +16,8 @@ namespace QuickRecipe.Data.Models
         [StringLength(300)]
         public string Description { get; set; }
         [Column("cooking_time")]
-        public int TimeAmount { get; set; }
+        [StringLength(10)]
+        public string TimeAmount { get; set; }
         [Column("portions")]
         public int Portions { get; set; }
         public ICollection<Step> Steps { get; set; } = new List<Step>();
