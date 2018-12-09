@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRecipe", "QuickRecipe\QuickRecipe.csproj", "{1E4AE2A1-B052-4A20-8BB9-01ACEE88434E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickRecipe", "QuickRecipe\QuickRecipe.csproj", "{1E4AE2A1-B052-4A20-8BB9-01ACEE88434E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRecipe.Test", "..\QuickRecipe.Test\QuickRecipe.Test.csproj", "{47D16A19-D745-4BCA-BD74-149B9D7245A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickRecipe.Test", "..\QuickRecipe.Test\QuickRecipe.Test.csproj", "{47D16A19-D745-4BCA-BD74-149B9D7245A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRecipe.Data", "QuickRecipe.Data\QuickRecipe.Data.csproj", "{D27F8C6A-42D2-4BDE-962B-8E0E9EFEAE20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickRecipe.Data", "QuickRecipe.Data\QuickRecipe.Data.csproj", "{D27F8C6A-42D2-4BDE-962B-8E0E9EFEAE20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRecipe.ImageCache", "QuickRecipe.ImageCache\QuickRecipe.ImageCache.csproj", "{0D5CE842-3465-44A8-9473-4C78328FC814}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D27F8C6A-42D2-4BDE-962B-8E0E9EFEAE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27F8C6A-42D2-4BDE-962B-8E0E9EFEAE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D27F8C6A-42D2-4BDE-962B-8E0E9EFEAE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5CE842-3465-44A8-9473-4C78328FC814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5CE842-3465-44A8-9473-4C78328FC814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5CE842-3465-44A8-9473-4C78328FC814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5CE842-3465-44A8-9473-4C78328FC814}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
