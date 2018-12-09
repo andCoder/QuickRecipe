@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuickRecipe.Data.Context;
 
 namespace QuickRecipe.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181208232754_recipe-increase-coulmns-length")]
+    partial class recipeincreasecoulmnslength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,11 +27,12 @@ namespace QuickRecipe.Migrations
                         .HasColumnName("productid")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Amount")
+                    b.Property<double>("Amount")
                         .HasColumnName("amount");
 
                     b.Property<string>("Name")
-                        .HasColumnName("name");
+                        .HasColumnName("name")
+                        .HasMaxLength(100);
 
                     b.Property<int>("RecipeId")
                         .HasColumnName("recipe");
@@ -49,19 +52,19 @@ namespace QuickRecipe.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .HasColumnName("description");
+                        .HasColumnName("description")
+                        .HasMaxLength(500);
 
                     b.Property<int>("Portions")
                         .HasColumnName("portions");
 
-                    b.Property<string>("PreviewUrl")
-                        .HasColumnName("preview");
-
                     b.Property<string>("TimeAmount")
-                        .HasColumnName("cooking_time");
+                        .HasColumnName("cooking_time")
+                        .HasMaxLength(256);
 
                     b.Property<string>("Title")
-                        .HasColumnName("title");
+                        .HasColumnName("title")
+                        .HasMaxLength(256);
 
                     b.HasKey("Id");
 
@@ -76,10 +79,12 @@ namespace QuickRecipe.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .HasColumnName("description");
+                        .HasColumnName("description")
+                        .HasMaxLength(256);
 
                     b.Property<string>("ImageUrl")
-                        .HasColumnName("image");
+                        .HasColumnName("image")
+                        .HasMaxLength(256);
 
                     b.Property<int>("RecipeId")
                         .HasColumnName("recipe");

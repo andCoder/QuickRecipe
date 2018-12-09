@@ -10,13 +10,12 @@ namespace QuickRecipe.Data.Models
         [Column("recipeid")]
         public int Id { get; set; }
         [Column("title")]
-        [StringLength(100)]
         public string Title { get; set; }
         [Column("description")]
-        [StringLength(300)]
         public string Description { get; set; }
+        [Column("preview")]
+        public string PreviewUrl { get; set; }
         [Column("cooking_time")]
-        [StringLength(10)]
         public string TimeAmount { get; set; }
         [Column("portions")]
         public int Portions { get; set; }

@@ -12,10 +12,8 @@ namespace QuickRecipe.Data.Models
         [Column("stepid")]
         public int Id { get; set; }
         [Column("description")]
-        [StringLength(256)]
         public string Description { get; set; }
         [Column("image")]
-        [StringLength(256)]
         public string ImageUrl { get; set; }
         [Column("recipe")]
         public int RecipeId { get; set; }

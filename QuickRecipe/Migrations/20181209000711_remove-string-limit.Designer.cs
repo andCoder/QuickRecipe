@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuickRecipe.Data.Context;
 
 namespace QuickRecipe.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181209000711_remove-string-limit")]
+    partial class removestringlimit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,7 +27,7 @@ namespace QuickRecipe.Migrations
                         .HasColumnName("productid")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Amount")
+                    b.Property<double>("Amount")
                         .HasColumnName("amount");
 
                     b.Property<string>("Name")
@@ -53,9 +55,6 @@ namespace QuickRecipe.Migrations
 
                     b.Property<int>("Portions")
                         .HasColumnName("portions");
-
-                    b.Property<string>("PreviewUrl")
-                        .HasColumnName("preview");
 
                     b.Property<string>("TimeAmount")
                         .HasColumnName("cooking_time");
